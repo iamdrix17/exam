@@ -88,16 +88,16 @@
     $result = $con->query($sql);
     $total_painted = $result->num_rows;
 
-    $sql = "SELECT * FROM tblqueue WHERE target_color='Blue'";
+    $sql = "SELECT * FROM tblqueue WHERE target_color='Blue' and status='COMPLETED'";
     $result = $con->query($sql);
     $blue = $result->num_rows;
 
-    $sql = "SELECT * FROM tblqueue WHERE target_color='Red'";
+    $sql = "SELECT * FROM tblqueue WHERE target_color='Red'  and status='COMPLETED'";
     $result = $con->query($sql);
     $red = $result->num_rows;
 
 
-    $sql = "SELECT * FROM tblqueue WHERE target_color='Green'";
+    $sql = "SELECT * FROM tblqueue WHERE target_color='Green' and status='COMPLETED'";
     $result = $con->query($sql);
     $green = $result->num_rows;
 
